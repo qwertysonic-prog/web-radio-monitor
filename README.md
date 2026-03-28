@@ -1,6 +1,6 @@
 # Web Radio Monitor
 
-Monitors internet radio streams in real time and auto-adjusts volume when favourite artists or songs come on. Reads ICY metadata from live streams via a Node.js proxy with a WebSocket-powered browser UI.
+Monitors internet radio streams in real time. See what's playing on multiple stations at once, build a watchlist of favourite artists or songs, and listen directly in your browser.
 
 ## Features
 
@@ -10,75 +10,114 @@ Monitors internet radio streams in real time and auto-adjusts volume when favour
 - Stream audio directly in the browser via a built-in proxy
 - Station history so you can quickly re-add previously used streams
 
-## Prerequisites
+---
 
-- [Node.js](https://nodejs.org/) v16 or higher
-- npm (included with Node.js)
+## Step 1 — Install Node.js
 
-## Installation
+This app runs on **Node.js**, a free tool that lets you run JavaScript outside of a browser.
 
-1. **Clone the repository**
+1. Go to [https://nodejs.org](https://nodejs.org)
+2. Click the **LTS** download button (the one labelled "Recommended for most users")
+3. Run the installer and follow the prompts — the default options are fine
 
-   ```bash
-   git clone https://github.com/qwertysonic-prog/web-radio-monitor.git
-   cd web-radio-monitor
-   ```
+To confirm it installed correctly, open a terminal (see Step 2) and type:
 
-2. **Install dependencies**
+```
+node --version
+```
 
-   ```bash
-   npm install
-   ```
+You should see a version number like `v20.11.0`. If you do, you're good to go.
 
-## Running the App
+---
 
-```bash
+## Step 2 — Open a Terminal
+
+A terminal lets you type commands to run the app.
+
+- **Windows:** Press `Win + R`, type `cmd`, and press Enter
+- **Mac:** Open **Finder → Applications → Utilities → Terminal**
+
+---
+
+## Step 3 — Download the App
+
+You don't need Git. Just download the project as a ZIP file:
+
+1. Go to [https://github.com/qwertysonic-prog/web-radio-monitor](https://github.com/qwertysonic-prog/web-radio-monitor)
+2. Click the green **Code** button near the top right
+3. Click **Download ZIP**
+4. Once downloaded, right-click the ZIP file and choose **Extract All** (Windows) or double-click it (Mac)
+5. Move the extracted folder somewhere easy to find, like your Desktop
+
+---
+
+## Step 4 — Navigate to the Folder in Your Terminal
+
+In your terminal, you need to move into the folder you just extracted.
+
+**Windows example** (if you put it on your Desktop):
+
+```
+cd C:\Users\YourName\Desktop\web-radio-monitor-main
+```
+
+**Mac example:**
+
+```
+cd ~/Desktop/web-radio-monitor-main
+```
+
+> Tip: You can type `cd ` (with a space after it) and then drag the folder into the terminal window — it will fill in the path for you.
+
+---
+
+## Step 5 — Install Dependencies
+
+The app uses a few open-source packages. Install them by running:
+
+```
+npm install
+```
+
+This only needs to be done once. It will create a `node_modules` folder — that's normal.
+
+---
+
+## Step 6 — Start the App
+
+```
 npm start
 ```
 
-Then open your browser and go to:
+You should see:
+
+```
+Web Radio Monitor running at http://localhost:3000
+```
+
+Now open your browser and go to:
 
 ```
 http://localhost:3000
 ```
 
-The server defaults to port **3000**. To use a different port, set the `PORT` environment variable:
+The app will be running. To stop it, go back to the terminal and press `Ctrl + C`.
 
-```bash
-PORT=8080 npm start
-```
+---
 
 ## Usage
 
 ### Adding a Station
-Click **Add Station**, enter a name and the stream URL (e.g. an `.mp3` or Shoutcast/Icecast stream URL), then click Add. The station will appear as a card and start monitoring immediately.
+Click **Add Station**, enter a name and the stream URL, then click Add. The station will appear as a card and start showing what's playing.
 
 ### Watchlist
 Open the **Watchlist** panel and add artist names or song titles. When a monitored station plays a match, it will be highlighted in the UI.
 
 ### Listening
-Each station card has a play button that streams the audio directly through the built-in proxy — no need to open a separate player.
+Each station card has a play button that streams the audio directly through the app — no need to open a separate player.
 
-## Project Structure
-
-```
-web-radio-monitor/
-├── server/
-│   ├── index.js          # Express server, REST API, WebSocket broadcast
-│   ├── store.js          # In-memory + file-backed data store
-│   ├── streamMonitor.js  # ICY metadata polling for each station
-│   └── streamProxy.js    # Proxies the audio stream to the browser
-├── public/
-│   ├── index.html
-│   ├── css/style.css
-│   └── js/
-│       ├── app.js
-│       ├── stationCard.js
-│       └── watchlist.js
-└── data/
-    └── config.json       # Persisted stations, watchlist, and history
-```
+---
 
 ## Data Persistence
 
-Stations, watchlist entries, and station history are saved to `data/config.json` automatically. This file is included in the repo with a few example stations — edit or clear it as needed.
+Your stations, watchlist, and history are saved automatically to `data/config.json` inside the app folder. They will still be there the next time you start the app.
