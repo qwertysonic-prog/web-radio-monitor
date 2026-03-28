@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Radio Monitor</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Web Radio Monitor</h1>
+    <p class="subtitle">Auto-volume when your favorites play</p>
+  </header>
+
+  <main>
+    <!-- Controls Panel -->
+    <section class="controls-panel">
+      <!-- Add Station -->
+      <div class="control-group">
+        <h2>Add Station</h2>
+        <form id="add-station-form">
+          <input type="text" id="station-name" placeholder="Station name" required>
+          <input type="url" id="station-url" placeholder="Stream URL (Icecast/Shoutcast)" required>
+          <button type="submit">Add Station</button>
+        </form>
+        <div id="recent-stations" class="recent-stations" style="display:none">
+          <h3>Recent Stations</h3>
+          <ul id="recent-stations-list"></ul>
+        </div>
+      </div>
+
+      <!-- Watchlist -->
+      <div class="control-group">
+        <h2>Watchlist</h2>
+        <form id="add-watchlist-form">
+          <select id="watchlist-type">
+            <option value="artist">Artist</option>
+            <option value="song">Song</option>
+          </select>
+          <input type="text" id="watchlist-value" placeholder="e.g. Queen" required>
+          <button type="submit">Add</button>
+        </form>
+        <ul id="watchlist-entries"></ul>
+      </div>
+    </section>
+
+    <!-- Station Cards -->
+    <section id="stations-grid" class="stations-grid">
+      <!-- Cards will be inserted here dynamically -->
+    </section>
+
+    <div id="no-stations" class="no-stations">
+      <p>No stations added yet. Add a stream URL above to get started.</p>
+      <p class="hint">Try SomaFM streams like <code>https://ice1.somafm.com/groovesalad-128-mp3</code></p>
+    </div>
+  </main>
+
+  <script src="js/watchlist.js"></script>
+  <script src="js/stationCard.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

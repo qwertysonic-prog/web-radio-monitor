@@ -1,0 +1,138 @@
+{
+  "stations": [
+    {
+      "id": "bd086f6ad810",
+      "name": "101.1 KCFX",
+      "url": "https://14023.live.streamtheworld.com:443/KCFXFMAACIHR_SC"
+    },
+    {
+      "id": "36285dcce3ab",
+      "name": "99.9 KGOR",
+      "url": "https://stream.revma.ihrhls.com/zc3344"
+    },
+    {
+      "id": "df9816f862cc",
+      "name": "94.9 KCMO",
+      "url": "http://17793.live.streamtheworld.com/KCMOFMAAC_SC"
+    }
+  ],
+  "watchlist": [
+    {
+      "id": "1ec21c390b11",
+      "type": "artist",
+      "value": "Queen"
+    },
+    {
+      "id": "40a08b4a10c1",
+      "type": "artist",
+      "value": "Eddie Money"
+    },
+    {
+      "id": "b5e15c3a6f67",
+      "type": "artist",
+      "value": "whitney"
+    },
+    {
+      "id": "42cc9cced65d",
+      "type": "artist",
+      "value": "billy Joel"
+    },
+    {
+      "id": "9a72a95c78f0",
+      "type": "artist",
+      "value": "REO"
+    },
+    {
+      "id": "0a11bf671d59",
+      "type": "artist",
+      "value": "men at work"
+    },
+    {
+      "id": "4a156d29d7a7",
+      "type": "artist",
+      "value": "boston"
+    },
+    {
+      "id": "40f61686cad2",
+      "type": "artist",
+      "value": "eagles"
+    },
+    {
+      "id": "b69ecb3b812c",
+      "type": "artist",
+      "value": "Journey"
+    },
+    {
+      "id": "98d1a85b7423",
+      "type": "artist",
+      "value": "Chicago"
+    },
+    {
+      "id": "20dc54a875dd",
+      "type": "artist",
+      "value": "Bonnie Tyler"
+    },
+    {
+      "id": "9a77cc631ca4",
+      "type": "artist",
+      "value": "AC/DC"
+    },
+    {
+      "id": "d15e3a02a688",
+      "type": "artist",
+      "value": "Beatles"
+    },
+    {
+      "id": "9ab6b7bbb1cf",
+      "type": "artist",
+      "value": "Elton John"
+    },
+    {
+      "id": "75ce985b11fa",
+      "type": "artist",
+      "value": "Tom petty"
+    },
+    {
+      "id": "b3fc174ff290",
+      "type": "song",
+      "value": "Summer of '69"
+    },
+    {
+      "id": "755f57c752d7",
+      "type": "artist",
+      "value": "Fleetwood Mac"
+    },
+    {
+      "id": "d5b32e74d1f4",
+      "type": "artist",
+      "value": "Heart"
+    },
+    {
+      "id": "f35934d088c2",
+      "type": "artist",
+      "value": "Bon Jovi"
+    },
+    {
+      "id": "8454fdda76e5",
+      "type": "artist",
+      "value": "Madonna"
+    }
+  ],
+  "stationHistory": [
+    {
+      "name": "94.9 KCMO",
+      "url": "http://17793.live.streamtheworld.com/KCMOFMAAC_SC",
+      "lastUsed": 1770903591794
+    },
+    {
+      "name": "99.9 KGOR",
+      "url": "https://stream.revma.ihrhls.com/zc3344",
+      "lastUsed": 1770520671068
+    },
+    {
+      "name": "101.1 KCFX",
+      "url": "https://14023.live.streamtheworld.com:443/KCFXFMAACIHR_SC",
+      "lastUsed": 1770520666681
+    }
+  ]
+}
